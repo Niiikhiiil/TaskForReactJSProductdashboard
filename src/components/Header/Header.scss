@@ -1,0 +1,53 @@
+// Colors used in the header
+$main-color: #2c3e50; // Dark blue for background
+$text-color: #ffffff; // White for text
+
+.header {
+  // Gradient background from dark blue to slightly darker
+  background: linear-gradient(90deg, $main-color, #032141);
+  color: $text-color;
+  padding: 1rem 2rem; // Space around the header
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); // Subtle shadow
+  position: sticky; // Sticks to top when scrolling
+  top: 0;
+  z-index: 1000; // Ensures header stays on top
+
+  .header-container {
+    max-width: 1200px; // Limits width on large screens
+    margin: 0 auto; // Centers the content
+    display: flex;
+    justify-content: center; // Centers the logo
+    align-items: center; // Vertically aligns content
+  }
+
+  .header-name {
+    h1 {
+      font-size: 2rem; // Default font size
+      margin: 0; // Removes default margin
+      font-weight: bold; // Makes text bold
+      text-align: center; // Centers the text
+    }
+  }
+
+  // For tablets and smaller screens (up to 768px)
+  @media (max-width: 768px) {
+    padding: 0.75rem 1.5rem; // Slightly less padding
+
+    .header-name {
+      h1 {
+        font-size: 1.75rem; // Smaller font size
+      }
+    }
+  }
+
+  // For very small screens (up to 480px)
+  @media (max-width: 480px) {
+    padding: 0.5rem 1rem; // Even less padding
+
+    .header-name {
+      h1 {
+        font-size: 1.5rem; // Smallest font size
+      }
+    }
+  }
+}
